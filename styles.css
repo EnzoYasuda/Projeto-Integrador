@@ -109,6 +109,7 @@ form .signup-link a:hover {
     align-self: flex-end;
     cursor: pointer;
     color: white;
+    font-size: 30px;
 }
 
 .container .close-btn:hover {
@@ -135,25 +136,4 @@ form .signup-link a:hover {
 
 input[type="checkbox"] {
     display: none;
-}
-
-.off-screen-menu {
-    background-color: #6b6b6b;
-    height: 100%;
-    width: 100%;
-    max-width: 400px;
-    position: fixed;
-    top: 0;
-    left: -400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 400;
-    transition: .3s ease;
-}
-
-.off-screen-menu.active {
-    left: 0;
 }
