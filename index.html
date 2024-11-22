@@ -7,75 +7,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
+    <div class="center">
 
-    <div class="off-screen-menu"> 
+        <input type="checkbox" id="show">
+        <label for="show" class="show-btn">Login</label>
 
-        <ul>
-            <li>Home</li>
-            <li>Search</li>
-            <li>Reviews</li>
-            <li>Random</li>
-            <li>Genre</li>
-        </ul>
+        <div class="container">
 
-    </div>
+            <label for="show" class="close-btn fas fa-times">X</label>
 
-    <nav>
+            <div class="text">Login Form</div>
+            <form action="#">
 
-        <div class="ham-menu">
+                <div class="data">
+                    <label>Username or Email</label>
+                    <input type="text" required>
 
-            <span></span>
-            <span></span>
-            <span></span>
+                </div>
+
+                <div class="data">
+                    <label>Password</label>
+                    <input type="text" required>
+
+                </div>
+
+                <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
+
+                <div class="btn">
+
+                    <div class="inner"></div>
+                    <button type="submit">Login</button>
+
+                </div>
+
+                <div class="signup-link">Do not have an account? <a href="#">Sign up</a></div>
+
+            </form>
 
         </div>
-
-    </nav>
-
-    <input type="checkbox" id="show">
-    <label for="show" class="show-btn">Login</label>
-
-    <div class="container">
-
-        <label class="close-btn fas fa-times" for="show">x</label>
-
-        <img src="1728511529227.png" style="align-self: center;" width="200" height="auto">
-        
-        <form action="#">
-
-            <div class="data">
-
-                <label for="">Username</label>
-                <input type="text" required>
-
-            </div>
-
-            <div class="data">
-
-                <label for="">Password</label>
-                <input type="text" required>
-
-            </div>
-
-            <div class="forgot_password">
-
-                <a href="#">Forgot Password?</a>
-
-            </div>
-
-            <div class="btn">
-
-                <button type="submit">Login</button>
-
-            </div>
-
-            <div class="signup-link">Don't have an account? 
-            
-                <a href="s">Sign up now</a>
-            
-            </div>
-
-        </form>
 
     </div>
     
