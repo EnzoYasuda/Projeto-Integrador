@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="module" src="../config/firebase.js"></script>
+</head>
+<body>
+    <div class="container" style="display: flex; width: 600px;">
+        <div class="text">SignUp Form</div>
+        <form action="#" id="signUp-form">
+            <div id="signUpMessage" class="messageDiv" style="display: none;"></div>
+            <div class="data">
+                <label>Username</label>
+                <input type="text" id="signup-username" placeholder="Username " required>
+            </div>
+            <div class="data">
+                <label>Email</label>
+                <input type="text" id="signup-email" placeholder="Email" required>
+            </div>
+            <div class="data">
+                <label>Password</label>
+                <input type="text" id="signup-password" placeholder="Password" required>
+            </div>
+            <div class="btn">
+                <div class="inner"></div>
+                <button type="submit-signup" id="submit-signup">SignUp</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../script.js"></script>
+    <script type="module" src="../components/auth.js"></script>
+</body>
+</html>
