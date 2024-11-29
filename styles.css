@@ -7,7 +7,7 @@ body {
     color: white;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: none;
@@ -15,26 +15,129 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+nav {
+    background-color: #212121;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0,1);
+    margin-top: 25px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #b0aeae;
+}
+
+.sidebar {
+    margin-top: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #5a5a5a37;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0,1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.show-btn {
+    background: #6b6b6b;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px;
+}
+
+.show-btn {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    transform: translate(-50%,-50%);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
 .container {
     display: none;
-    justify-content: center;
-    flex-direction: column;
     background: #4F4D4D;
-    width: 50%;
-    padding: 10px;
-    box-shadow: 0 0 8px rgba(0,0,0,4);
+    width: 410px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#show:checked ~ .container {
+    display: block;
+}
+
+.conatiner .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.container .text {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .container form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin-top: -20px;
 }
 
 .container form .data {
     height: 45px;
     width: 100%;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 form .data label {
@@ -46,27 +149,24 @@ form .data input {
     width: 100%;
     padding-left: 10px;
     font-size: 17px;
-    border: 1px solid silver;
+    border: 1px solid lightgrey;
 }
 
 form .data input:focus {
-    border-color: #4158d0;
+    border-color: black;
     border-bottom-width: 2px;
 }
 
-form .forgot_password {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-self: start;
+form .forgot-pass {
+    margin-top: -8px;
 }
 
-form .forgot_password a {
+form .forgot-pass a {
     color: #5A70FF;
     text-decoration: none;
 }
 
-form .forgot_password a:hover{
+form .forgot-pass a:hover {
     text-decoration: underline;
     color: white;
 }
@@ -75,24 +175,38 @@ form .btn {
     margin: 30px 0;
     height: 45px;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+form .btn .inner {
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    z-index: -1;
+    transition: all 0.4s;
+    background: #6b6b6b;
+}
+
+form .btn:hover .inner {
+    left: 0;
 }
 
 form .btn button {
     height: 100%;
     width: 100%;
-    background-color: #6b6b6b;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+    background: none;
     border: none;
+    color: #fff;
+    font-size: 18px;
     text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
-    background-size: 200%;
-    transition: all 0.6s;
 }
 
-.btn button:hover {
-    background-position: center;
+form .signup-link {
+    text-align: center;
 }
 
 form .signup-link a{
@@ -103,37 +217,4 @@ form .signup-link a{
 form .signup-link a:hover {
     text-decoration: underline;
     color: white;
-}
-
-.container .close-btn {
-    align-self: flex-end;
-    cursor: pointer;
-    color: white;
-    font-size: 30px;
-}
-
-.container .close-btn:hover {
-    color:#5A70FF
-}
-
-.show-btn {
-    background-color: #6b6b6b;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: 300;
-    cursor: pointer;
-    color: white;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-#show:checked ~ .container {
-    display: flex;
-}
-
-#show:checked ~ .show-btn {
-    display: none;
-}
-
-input[type="checkbox"] {
-    display: none;
 }
