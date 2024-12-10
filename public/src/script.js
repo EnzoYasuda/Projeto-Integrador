@@ -22,5 +22,5 @@ function sendGenre() {
     location.replace("pages/Genre.html")
 }
 function SignUp() {
-    location.replace("pages/signup.html")
+    location.replace("src/pages/signup.html")
 }

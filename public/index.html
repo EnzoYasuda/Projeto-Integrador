@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tune Trails</title>
     <link rel="stylesheet" href="src/styles.css">
-    <script type="module" src="src/config/firebase.js"></script>
     <script src="https://kit.fontawesome.com/cb3c3fa1b0.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -17,8 +16,8 @@
         <div class="container">
             <label for="show" class="close-btn fas fa-times"></label>
             <div class="text">Login Form</div>
-            <form action="#" id="logIn-form">
-                <div id="logInMessage" class="messageDiv" style="display: none;"></div>
+            <form method="post" id="logIn-form">
+                <div id="signInMessage" class="messageDiv" style="display: none;"></div>
                 <div class="data">
                     <label>Email</label>
                     <input type="text" id="login-email" placeholder="Email" required>
@@ -30,7 +29,7 @@
                 <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
                 <div class="btn">
                     <div class="inner"></div>
-                    <button type="submit-login" id="submit-login">Login</button>
+                    <button type="submit" id="submit-login">Login</button>
                 </div>
                 <div class="signup-link" onclick="SignUp()">Do not have an account? <a href="#">Sign up</a></div>
             </form>
@@ -58,6 +57,7 @@
     <p style="text-align: center; margin-top: 30px; font-size: 18px;">Most searched musics: "Beuatiful Things", “Lose Control”, “Cruel Summer”, “Greedy”, “Espresso”</p>
     
     <script src="src/script.js"></script>
+    <script type="module" src="src/config/firebase.js"></script>
     <script type="module" src="src/components/auth.js"></script>
   </body>
 </html>
