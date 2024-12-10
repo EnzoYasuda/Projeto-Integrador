@@ -10,16 +10,16 @@ function sendHome() {
     location.replace("index.html")
 }
 function sendSearch() {
-    location.replace("pages/search.html")
+    location.replace("src/pages/search.html")
 }
 function sendReviews() {
-    location.replace("pages/reviews.html")
+    location.replace("src/pages/reviews.html")
 }
 function sendRandom() {
-    location.replace("pages/random.html")
+    location.replace("src/pages/random.html")
 }
 function sendGenre() {
-    location.replace("pages/Genre.html")
+    location.replace("src/pages/genre.html")
 }
 function SignUp() {
     location.replace("src/pages/signup.html")
