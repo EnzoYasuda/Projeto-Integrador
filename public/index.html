@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tune Trails</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="https://kit.fontawesome.com/cb3c3fa1b0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <img src="assets/png/logo.png" alt="logo" style="height: 300px;width: auto;left: 25%;top: 8%; position: absolute;">
+    <img src="assets/jpg/famous-female-singers-img (1).jpg" alt="imagem de uma mulher cantando" style="height: 200px;width: 350px;right: 25%;top: 14%;position: absolute;">
+    <div class="center">
+        <input type="checkbox" id="show">
+        <label for="show" class="show-btn">Login</label>
+        <div class="container">
+            <label for="show" class="close-btn fas fa-times"></label>
+            <div class="text">Login Form</div>
+            <form method="post" id="logIn-form">
+                <div id="signInMessage" class="messageDiv" style="display: none;"></div>
+                <div class="data">
+                    <label>Email</label>
+                    <input type="text" id="login-email" placeholder="Email" required>
+                </div>
+                <div class="data">
+                    <label>Password</label>
+                    <input type="text" id="login-password" placeholder="Password" required>
+                </div>
+                <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit" id="submit-login">Login</button>
+                </div>
+                <div class="signup-link" onclick="SignUp()">Do not have an account? <a href="#">Sign up</a></div>
+            </form>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="64px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="64px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li onclick="sendHome()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="64px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>Home</a></li>
+            <li onclick="sendSearch()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="64px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>Search</a></li>
+            <li onclick="sendReviews()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="64px" fill="#e8eaed"><path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z"/></svg>Reviews</a></li>
+            <li onclick="sendRandom()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="64px" fill="#e8eaed"><path d="M560-160v-80h104L537-367l57-57 126 126v-102h80v240H560Zm-344 0-56-56 504-504H560v-80h240v240h-80v-104L216-160Zm151-377L160-744l56-56 207 207-56 56Z"/></svg>Random</a></li>
+            <li onclick="sendGenre()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="64px" fill="#e8eaed"><path d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-422h240v160H560v400q0 66-47 113t-113 47Z"/></svg>Genre</a></li>
+        </ul>
+    </nav>
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search" autocomplete="off">
+            <button onclick="sendSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 30px; font-size: 18px;">Most searched musics: "Beuatiful Things", “Lose Control”, “Cruel Summer”, “Greedy”, “Espresso”</p>
+    
+    <script>
+        function sendHome() {
+            location.replace("index.html")
+        }
+        function sendSearch() {
+            location.replace("src/pages/search.html")
+        }
+        function sendReviews() {
+            location.replace("src/pages/reviews.html")
+        }
+        function sendRandom() {
+            location.replace("src/pages/random.html")
+        }
+        function sendGenre() {
+            location.replace("src/pages/genre.html")
+        }
+        function SignUp() {
+            location.replace("src/pages/signup.html")
+        }
+    </script>
+    <script src="src/script.js"></script>
+    <script type="module" src="src/config/firebase.js"></script>
+    <script type="module" src="src/components/auth.js"></script>
+  </body>
+</html>
