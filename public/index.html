@@ -51,11 +51,31 @@
     <div class="search-box">
         <div class="row">
             <input type="text" id="input-box" placeholder="Search" autocomplete="off">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button onclick="sendSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </div>
     <p style="text-align: center; margin-top: 30px; font-size: 18px;">Most searched musics: "Beuatiful Things", “Lose Control”, “Cruel Summer”, “Greedy”, “Espresso”</p>
     
+    <script>
+        function sendHome() {
+            location.replace("index.html")
+        }
+        function sendSearch() {
+            location.replace("src/pages/search.html")
+        }
+        function sendReviews() {
+            location.replace("src/pages/reviews.html")
+        }
+        function sendRandom() {
+            location.replace("src/pages/random.html")
+        }
+        function sendGenre() {
+            location.replace("src/pages/genre.html")
+        }
+        function SignUp() {
+            location.replace("src/pages/signup.html")
+        }
+    </script>
     <script src="src/script.js"></script>
     <script type="module" src="src/config/firebase.js"></script>
     <script type="module" src="src/components/auth.js"></script>
