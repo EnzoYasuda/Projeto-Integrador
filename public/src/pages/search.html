@@ -50,10 +50,33 @@
     <div class="search-box" style="width: 400px; position: absolute; left: 18%; top: -29.5%;">
         <div class="row" style="height: 30px;">
             <input type="text" id="input-box" placeholder="Search" autocomplete="off">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </div>
+    <div class="search-results" id="search-results" style="padding: 20px;">
+        <!-- Os resultados da pesquisa serão exibidos aqui -->
+    </div>
 
+    <script>
+        function sendHome() {
+            location.replace("../../index.html")
+        }
+        function sendSearch() {
+            location.replace("search.html")
+        }
+        function sendReviews() {
+            location.replace("reviews.html")
+        }
+        function sendRandom() {
+            location.replace("random.html")
+        }
+        function sendGenre() {
+            location.replace("genre.html")
+        }
+        function SignUp() {
+            location.replace("signup.html")
+        }
+    </script>
     <script src="../script.js"></script>
     <script type="module" src="../config/firebase.js"></script>
     <script type="module" src="../components/auth.js"></script>
